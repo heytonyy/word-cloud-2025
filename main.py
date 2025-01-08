@@ -41,21 +41,20 @@ for period, group in period_groups:
     plt.savefig(f'{period.replace(" ", "")}_wordcloud.png', bbox_inches='tight')
     plt.close()
 
+
+
+# Same process as above, but for all periods combined
 all_words = ' '.join(df['Word of 2025'].dropna().str.lower().str.strip())
 
-# Filter out inappropriate words
 all_clean_text = filter_words(all_words)
 
-# Generate word cloud
 wordcloud = WordCloud(width=800, height=400,
                       background_color='white').generate(all_clean_text)
 
-# Create and save the plot
 plt.figure(figsize=(10, 5))
 plt.imshow(wordcloud)
 plt.axis('off')
-plt.title(f'Word Cloud - All Periods')
+plt.title(f'Word Cloud 2025')
 
-# Save each period's word cloud as a separate file
 plt.savefig('all_periods_wordcloud.png', bbox_inches='tight')
 plt.close()
