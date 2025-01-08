@@ -1,3 +1,7 @@
+## All Periods
+
+![all period wordcloud](all_periods_wordcloud.png)
+
 ## Period 1
 
 ![period 1 wordcloud](Period1_wordcloud.png)
