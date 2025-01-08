@@ -37,5 +37,5 @@ for period, group in period_groups:
     plt.title(f'Word Cloud - {period}')
     
     # Save each period's word cloud as a separate file
-    plt.savefig(f'{period}_wordcloud.png', bbox_inches='tight')
+    plt.savefig(f'{period.replace(" ", "")}_wordcloud.png', bbox_inches='tight')
     plt.close()
